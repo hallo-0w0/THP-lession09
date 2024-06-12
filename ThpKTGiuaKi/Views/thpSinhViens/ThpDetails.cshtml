@@ -1,0 +1,74 @@
+﻿@model ThpKTGiuaKi.Models.thpSinhVien
+
+@{
+    ViewBag.Title = "ThpDetails";
+}
+
+<h2>Thp-Details</h2>
+
+<div>
+    <h4>thpSinhVien</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.ThpHoSV)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ThpHoSV)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ThpTenSV)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ThpTenSV)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ThpNgaySinh)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ThpNgaySinh)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ThpPhai)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ThpPhai)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ThpPhone)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ThpPhone)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ThpEmail)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ThpEmail)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.thpKhoa.ThpTenKH)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.thpKhoa.ThpTenKH)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("ThpEdit", "ThpEdit", new { id = Model.ThpMaSV }) |
+    @Html.ActionLink("Back to List", "ThpIndex")
+</p>

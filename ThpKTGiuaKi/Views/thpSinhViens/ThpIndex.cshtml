@@ -1,0 +1,69 @@
+﻿@model IEnumerable<ThpKTGiuaKi.Models.thpSinhVien>
+
+@{
+    ViewBag.Title = "ThpIndex";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "ThpCreate")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.ThpHoSV)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ThpTenSV)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ThpNgaySinh)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ThpPhai)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ThpPhone)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ThpEmail)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.thpKhoa.ThpTenKH)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.ThpHoSV)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ThpTenSV)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ThpNgaySinh)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ThpPhai)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ThpPhone)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ThpEmail)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.thpKhoa.ThpTenKH)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "ThpEdit", new { id=item.ThpMaSV }) |
+            @Html.ActionLink("Details", "ThpDetails", new { id=item.ThpMaSV }) |
+            @Html.ActionLink("Delete", "ThpDelete", new { id=item.ThpMaSV })
+        </td>
+    </tr>
+}
+
+</table>

@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="sysdiagram">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="thpKhoa">
+    <Key>
+      <PropertyRef Name="ThpMaKH" />
+    </Key>
+    <Property Name="ThpMaKH" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="ThpTenKH" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ThpTrangThai" Type="Boolean" />
+    <NavigationProperty Name="thpSinhViens" Relationship="Self.FK_thpSinhVien_thpKhoa" FromRole="thpKhoa" ToRole="thpSinhVien" />
+  </EntityType>
+  <EntityType Name="thpSinhVien">
+    <Key>
+      <PropertyRef Name="ThpMaSV" />
+    </Key>
+    <Property Name="ThpMaSV" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="ThpHoSV" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ThpTenSV" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ThpNgaySinh" Type="DateTime" Precision="0" />
+    <Property Name="ThpPhai" Type="Boolean" />
+    <Property Name="ThpPhone" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="ThpEmail" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ThpMaKH" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <NavigationProperty Name="thpKhoa" Relationship="Self.FK_thpSinhVien_thpKhoa" FromRole="thpSinhVien" ToRole="thpKhoa" />
+  </EntityType>
+  <Association Name="FK_thpSinhVien_thpKhoa">
+    <End Role="thpKhoa" Type="Self.thpKhoa" Multiplicity="0..1" />
+    <End Role="thpSinhVien" Type="Self.thpSinhVien" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="thpKhoa">
+        <PropertyRef Name="ThpMaKH" />
+      </Principal>
+      <Dependent Role="thpSinhVien">
+        <PropertyRef Name="ThpMaKH" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="Entities1" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagram" />
+    <EntitySet Name="thpKhoas" EntityType="Self.thpKhoa" />
+    <EntitySet Name="thpSinhViens" EntityType="Self.thpSinhVien" />
+    <AssociationSet Name="FK_thpSinhVien_thpKhoa" Association="Self.FK_thpSinhVien_thpKhoa">
+      <End Role="thpKhoa" EntitySet="thpKhoas" />
+      <End Role="thpSinhVien" EntitySet="thpSinhViens" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

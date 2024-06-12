@@ -1,0 +1,80 @@
+﻿@model ThpKTGiuaKi.Models.thpSinhVien
+
+@{
+    ViewBag.Title = "ThpDelete";
+}
+
+<h2>Thp-Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>thpSinhVien</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.ThpHoSV)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ThpHoSV)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ThpTenSV)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ThpTenSV)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ThpNgaySinh)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ThpNgaySinh)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ThpPhai)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ThpPhai)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ThpPhone)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ThpPhone)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ThpEmail)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ThpEmail)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.thpKhoa.ThpTenKH)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.thpKhoa.ThpTenKH)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "ThpIndex")
+        </div>
+    }
+</div>

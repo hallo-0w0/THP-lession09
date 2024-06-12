@@ -1,0 +1,40 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\ASP.NET_THP\\ThpKTGiuaKi\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{11892D20-78CA-4AC6-B6BE-7C9471542138}|ThpKTGiuaKi\\ThpKTGiuaKi.csproj|d:\\asp.net_thp\\thpktgiuaki\\thpktgiuaki\\models\\model2210900054.edmx||{C99AEA30-8E36-4515-B76F-496F5A48A6AA}|",
+      "RelativeMoniker": "D:0:0:{11892D20-78CA-4AC6-B6BE-7C9471542138}|ThpKTGiuaKi\\ThpKTGiuaKi.csproj|solutionrelative:thpktgiuaki\\models\\model2210900054.edmx||{C99AEA30-8E36-4515-B76F-496F5A48A6AA}|"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Model2210900054.edmx [Diagram1]",
+              "DocumentMoniker": "D:\\ASP.NET_THP\\ThpKTGiuaKi\\ThpKTGiuaKi\\Models\\Model2210900054.edmx",
+              "RelativeDocumentMoniker": "ThpKTGiuaKi\\Models\\Model2210900054.edmx",
+              "ToolTip": "D:\\ASP.NET_THP\\ThpKTGiuaKi\\ThpKTGiuaKi\\Models\\Model2210900054.edmx [Diagram1]",
+              "RelativeToolTip": "ThpKTGiuaKi\\Models\\Model2210900054.edmx [Diagram1]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001116|",
+              "WhenOpened": "2024-06-12T04:04:38.031Z",
+              "EditorCaption": " [Diagram1]"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
